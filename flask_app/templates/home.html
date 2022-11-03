@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            }
+    </style>
+    <title>Title</title>
+</head>
+<body bgcolor='#f9f9f9'>
+    <br><br>
+    <img src="{{ url_for('static', filename='ob.jpg') }}", width="500", height="400">
+    <center>
+        <br><br>
+        <h1> WEART </h1>
+        <h2> 작품 추천 서비스 </h2>
+        <br>
+        <form method="POST", action="{{url_for('get_recommendations')}}">
+           <b> 작품명 :  <input type="text", name='title', placeholder="작품명을 입력하세요."></b>
+            <input type="submit" , value='enter' >
+        </form>
+    </center>
+</body>
+</html>
